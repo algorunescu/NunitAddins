@@ -7,7 +7,6 @@
 namespace SampleFixtureExtension
 {
     using System;
-    using System.Collections.Generic;
     using System.Reflection;
 
     using NUnit.Core;
@@ -56,7 +55,7 @@ namespace SampleFixtureExtension
 
             var result = new TestResult(TestName);
 
-            while (runs < count + 1)
+            while (runs < this.count + 1)
             {
                 runs++;
                 result = base.Run(listener, filter);

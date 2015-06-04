@@ -41,7 +41,9 @@ namespace SampleFixtureExtension
         {
             IExtensionPoint suiteBuilders = host.GetExtensionPoint("SuiteBuilders");
             if (suiteBuilders == null)
+            {
                 return false;
+            }
 
             suiteBuilders.Install(this);
             return true;

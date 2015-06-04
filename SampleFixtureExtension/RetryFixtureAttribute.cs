@@ -11,7 +11,7 @@ namespace SampleFixtureExtension
     /// <summary>
     /// RetryFixtureExtensionAttribute is used to identify a RetryFixture class
     /// </summary>
-    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = true)]
     public class RetryFixtureAttribute : Attribute
     {
         public int Count { get; set; }
